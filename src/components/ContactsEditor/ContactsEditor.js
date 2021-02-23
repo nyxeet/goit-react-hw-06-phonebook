@@ -25,8 +25,6 @@ class ContactsEditor extends Component {
     e.preventDefault();
 
     this.props.onSubmit(this.state.text, this.state.tel);
-
-    this.setState({ text: '', tel: '' });
   };
 
   render() {
