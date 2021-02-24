@@ -18,9 +18,11 @@ const contacts = createReducer([...defaultState], {
     alert(`${payload.name} is already in contacts`);
     return state;
   },
+
   [actions.deleteContact]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
 });
+
 const filter = createReducer('', {
   [actions.changeFilter]: (_, { payload }) => payload,
 });
